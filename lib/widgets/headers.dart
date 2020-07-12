@@ -8,7 +8,28 @@ class HeaderSquare extends StatelessWidget {
         height: 300,
         color: Color(0xff212121),
         child: Center(
-          child: Text("Header Square"),
+          child: Text("HeaderSquare"),
+        ),
+      ),
+    );
+  }
+}
+
+class HeaderRoundBorders extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        height: 300,
+        decoration: BoxDecoration(
+          color: Color(0xff212121),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(70),
+            bottomRight: Radius.circular(70),
+          ),
+        ),
+        child: Center(
+          child: Text("HeaderHeaderRoundBorders"),
         ),
       ),
     );

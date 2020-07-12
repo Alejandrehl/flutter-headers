@@ -1,4 +1,4 @@
-import 'package:designs_app/widgets/headers.dart';
+import 'package:designs_app/screens/headers_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HeaderSquare(),
+      home: HeadersScreen(),
     );
   }
 }
