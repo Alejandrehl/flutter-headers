@@ -7,9 +7,13 @@ class HeadersScreen extends StatefulWidget {
 }
 
 class _HeadersScreenState extends State<HeadersScreen> {
-  int _current = 0;
+  int _current = 2;
 
-  final _header = [HeaderSquare(), HeaderRoundBorders()];
+  final _header = [
+    HeaderSquare(),
+    HeaderRoundBorders(),
+    HeaderDiagonal(),
+  ];
 
   void _nextHeader() {
     var next = _current + 1;
@@ -27,21 +31,6 @@ class _HeadersScreenState extends State<HeadersScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          _header[_current],
-          Container(
-            margin: EdgeInsets.only(bottom: 100),
-            child: RaisedButton(
-              child: Text("Siguiente"),
-              color: Theme.of(context).accentColor,
-              onPressed: _nextHeader,
-            ),
-          )
-        ],
-      ),
-    );
+    return Scaffold(body: _header[_current]);
   }
 }
