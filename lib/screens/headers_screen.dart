@@ -12,6 +12,14 @@ class _HeadersScreenState extends State<HeadersScreen> {
   final _header = [HeaderSquare(), HeaderRoundBorders()];
 
   void _nextHeader() {
+    var next = _current + 1;
+
+    if (next > _header.length - 1) {
+      return setState(() {
+        _current = 0;
+      });
+    }
+
     setState(() {
       _current += 1;
     });
@@ -23,6 +31,7 @@ class _HeadersScreenState extends State<HeadersScreen> {
       body: Column(
         children: <Widget>[
           _header[_current],
+          Divider(),
           RaisedButton(
             child: Text("Siguiente"),
             color: Theme.of(context).accentColor,
