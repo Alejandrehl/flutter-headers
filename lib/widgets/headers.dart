@@ -165,7 +165,7 @@ class _HeaderCurvedPainter extends CustomPainter {
     path.lineTo(0, size.height * 0.25);
     path.quadraticBezierTo(
       size.width * 0.5,
-      size.height * 0.40,
+      size.height * 0.50,
       size.width,
       size.height * 0.25,
     );
