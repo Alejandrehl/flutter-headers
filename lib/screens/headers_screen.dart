@@ -7,12 +7,13 @@ class HeadersScreen extends StatefulWidget {
 }
 
 class _HeadersScreenState extends State<HeadersScreen> {
-  int _current = 2;
+  int _current = 3;
 
   final _header = [
     HeaderSquare(),
     HeaderRoundBorders(),
     HeaderDiagonal(),
+    HeaderTriangular()
   ];
 
   void _nextHeader() {
