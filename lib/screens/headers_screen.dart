@@ -11,10 +11,25 @@ class _HeadersScreenState extends State<HeadersScreen> {
 
   final _header = [HeaderSquare(), HeaderRoundBorders()];
 
+  void _nextHeader() {
+    setState(() {
+      _current += 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _header[_current],
+      body: Column(
+        children: <Widget>[
+          _header[_current],
+          RaisedButton(
+            child: Text("Siguiente"),
+            color: Theme.of(context).accentColor,
+            onPressed: _nextHeader,
+          )
+        ],
+      ),
     );
   }
 }
