@@ -243,13 +243,20 @@ class _HeaderWaveGradientPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Rect rect =
-        new Rect.fromCircle(center: Offset(155.0, 55.0), radius: 180);
+        new Rect.fromCircle(center: Offset(0.0, 55.0), radius: 180);
 
     final Gradient gradient = new LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
       colors: <Color>[
         Color(0xff000000),
         Color(0xff212121),
         Color(0xff484848),
+      ],
+      stops: [
+        0.2,
+        0.5,
+        1.0,
       ],
     );
 
