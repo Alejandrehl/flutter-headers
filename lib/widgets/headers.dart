@@ -204,8 +204,14 @@ class _HeaderWavePainter extends CustomPainter {
     final path = new Path();
     path.lineTo(0, size.height * 0.25);
     path.quadraticBezierTo(
+      size.width * 0.25,
+      size.height * 0.30,
       size.width * 0.5,
-      size.height * 0.50,
+      size.height * 0.25,
+    );
+    path.quadraticBezierTo(
+      size.width * 0.75,
+      size.height * 0.20,
       size.width,
       size.height * 0.25,
     );
